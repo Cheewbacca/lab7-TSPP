@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "Gc7hVYYpNg/8Gy4KopyNygCK094Brln6EvweaPGdFTHYtkauMM8jA/QLh1WmN2beOR1ZrldM79YfjSmcybQefw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\DELL\\source\\repos\\Lab7-TSPP\\DAL\\DAL.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\DELL\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\DELL\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
