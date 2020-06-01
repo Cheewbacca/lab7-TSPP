@@ -45,7 +45,7 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
-              "version": "[3.1.4, )"
+              "version": "[1.1.6, )"
             },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
@@ -58,7 +58,7 @@
             },
             "Moq": {
               "target": "Package",
-              "version": "[4.14.1, )"
+              "version": "[4.7.0, )"
             },
             "xunit": {
               "target": "Package",

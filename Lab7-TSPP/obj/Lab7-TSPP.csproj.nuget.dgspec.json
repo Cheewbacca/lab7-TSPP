@@ -38,6 +38,12 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "Moq": {
+              "target": "Package",
+              "version": "[4.14.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
