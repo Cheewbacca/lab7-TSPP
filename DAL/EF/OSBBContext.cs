@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Catalog.DAL.Entities;
+using Microsoft.EntityFrameworkCore;
 
-namespace DAL.EF
+namespace Catalog.DAL.EF
 {
     public class OSBBContext
         : DbContext

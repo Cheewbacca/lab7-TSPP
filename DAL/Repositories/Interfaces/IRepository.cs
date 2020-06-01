@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
-namespace DAL.Repositories.Interfaces
+namespace Catalog.DAL.Repositories.Interfaces
 {
-   public interface Interface1<T> where T : class
+    public interface IRepository<T> where T : class
     {
         IEnumerable<T> GetAll();
         T Get(int id);

@@ -1,10 +1,11 @@
 ﻿using Catalog.DAL.EF;
-using DAL.Repositories.Interfaces;
+using Catalog.DAL.Entities;
+using Catalog.DAL.Repositories.Interfaces;
 
 namespace Catalog.DAL.Repositories.Impl
 {
     public class OSBBRepository
-        : BaseRepository<OSBB>, OSBB
+        : BaseRepository<OSBB>, IOSBBRepository
     {
 ​
         internal OSBBRepository(OSBBContext context)
