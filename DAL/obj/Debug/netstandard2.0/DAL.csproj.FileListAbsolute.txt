@@ -1,0 +1,5 @@
+C:\Users\DELL\source\repos\Lab7-TSPP\DAL\bin\Debug\netstandard2.0\DAL.deps.json
+C:\Users\DELL\source\repos\Lab7-TSPP\DAL\bin\Debug\netstandard2.0\DAL.dll
+C:\Users\DELL\source\repos\Lab7-TSPP\DAL\obj\Debug\netstandard2.0\DAL.csprojAssemblyReference.cache
+C:\Users\DELL\source\repos\Lab7-TSPP\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfoInputs.cache
+C:\Users\DELL\source\repos\Lab7-TSPP\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfo.cs
