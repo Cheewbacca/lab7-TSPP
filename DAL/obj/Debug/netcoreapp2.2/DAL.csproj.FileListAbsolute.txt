@@ -15,3 +15,4 @@ C:\Users\DELL\source\repos\Lab7-TSPP\DAL\obj\Debug\netcoreapp2.2\DAL.AssemblyInf
 C:\Users\DELL\source\repos\Lab7-TSPP\DAL\obj\Debug\netcoreapp2.2\DAL.csproj.CoreCompileInputs.cache
 C:\Users\DELL\source\repos\Lab7-TSPP\DAL\obj\Debug\netcoreapp2.2\DAL.dll
 C:\Users\DELL\source\repos\Lab7-TSPP\DAL\obj\Debug\netcoreapp2.2\DAL.pdb
+C:\Users\DELL\source\repos\Lab7-TSPP\DAL\obj\Debug\netcoreapp2.2\DAL.csprojAssemblyReference.cache

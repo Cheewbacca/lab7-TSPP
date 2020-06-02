@@ -1,0 +1,9 @@
+C:\Users\DELL\source\repos\Lab7-TSPP\CCL\bin\Debug\netcoreapp1.1\CCL.deps.json
+C:\Users\DELL\source\repos\Lab7-TSPP\CCL\bin\Debug\netcoreapp1.1\CCL.dll
+C:\Users\DELL\source\repos\Lab7-TSPP\CCL\bin\Debug\netcoreapp1.1\CCL.pdb
+C:\Users\DELL\source\repos\Lab7-TSPP\CCL\obj\Debug\netcoreapp1.1\CCL.AssemblyInfoInputs.cache
+C:\Users\DELL\source\repos\Lab7-TSPP\CCL\obj\Debug\netcoreapp1.1\CCL.AssemblyInfo.cs
+C:\Users\DELL\source\repos\Lab7-TSPP\CCL\obj\Debug\netcoreapp1.1\CCL.csproj.CoreCompileInputs.cache
+C:\Users\DELL\source\repos\Lab7-TSPP\CCL\obj\Debug\netcoreapp1.1\CCL.dll
+C:\Users\DELL\source\repos\Lab7-TSPP\CCL\obj\Debug\netcoreapp1.1\CCL.pdb
+C:\Users\DELL\source\repos\Lab7-TSPP\CCL\obj\Debug\netcoreapp1.1\CCL.csprojAssemblyReference.cache
