@@ -1,4 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Text;
 
 namespace Catalog.DAL.Entities
 {
@@ -8,7 +11,7 @@ namespace Catalog.DAL.Entities
         public string Name { get; set; }
         public string Address { get; set; }
         public string Director { get; set; }
-        public IEnumerable<Street> Streets { get; set; }
-        //public IEnumerable<User> Users { get; set; }
+
+        public List<Street> Streets { get; set; }
     }
 }

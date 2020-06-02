@@ -13,12 +13,12 @@ namespace Catalog.DAL.EF
         private OSBBContext db;
         private OSBBRepository osbbRepository;
         private StreetRepository streetRepository;
-​
-        public EFUnitOfWork(DbContextOptions options)
+
+        public EFUnitOfWork(OSBBContext context)
         {
-            db = new OSBBContext(options);
+            db = context;
         }
-        public IRepository<OSBB> OSBBs
+        public IOSBBRepository OSBBs
         {
             get
             {
@@ -27,8 +27,8 @@ namespace Catalog.DAL.EF
                 return osbbRepository;
             }
         }
-​
-        public IRepository<Street> Streets
+
+        public IStreetRepository Streets
         {
             get
             {
@@ -37,14 +37,14 @@ namespace Catalog.DAL.EF
                 return streetRepository;
             }
         }
-​
+
         public void Save()
         {
             db.SaveChanges();
         }
-​
+
         private bool disposed = false;
-​
+
         public virtual void Dispose(bool disposing)
         {
             if (!this.disposed)
@@ -56,7 +56,7 @@ namespace Catalog.DAL.EF
                 this.disposed = true;
             }
         }
-​
+
         public void Dispose()
         {
             Dispose(true);

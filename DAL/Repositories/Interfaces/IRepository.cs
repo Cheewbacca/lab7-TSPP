@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace Catalog.DAL.Repositories.Interfaces
 {
@@ -7,9 +8,10 @@ namespace Catalog.DAL.Repositories.Interfaces
     {
         IEnumerable<T> GetAll();
         T Get(int id);
-        IEnumerable<T> Find(Func<T, Boolean> predicate);
+        IEnumerable<T> Find(Func<T, Boolean> predicate, int pageNumber = 0, int pageSize = 10);
         void Create(T item);
         void Update(T item);
         void Delete(int id);
     }
+
 }
