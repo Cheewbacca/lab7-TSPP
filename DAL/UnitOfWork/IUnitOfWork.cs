@@ -8,8 +8,8 @@ namespace Catalog.DAL.UnitOfWork
 {
     public interface IUnitOfWork : IDisposable
     {
-        IOSBBRepository OSBBs { get; }
-        IStreetRepository Streets { get; }
+        CatalogRepository OSBBs { get; }
+        ProductRepository Streets { get; }
         void Save();
     }
 }

@@ -4,13 +4,13 @@ using System.Text;
 
 namespace Catalog.DAL.Entities
 {
-    public class Street
+    public class Product
     {
-        public int StreetId { get; set; }
+        public int ProductID { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
 
-        public int OSBBID { get; set; }
-        public OSBB OSBB { get; set; }
+        public int CatalogID { get; set; }
+        public Catalog Catalog { get; set; }
     }
 }

@@ -5,13 +5,13 @@ using System.Text;
 
 namespace Catalog.DAL.Entities
 {
-    public class OSBB
+    public class Catalog
     {
-        public int OSBBID { get; set; }
+        public int CatalogID { get; set; }
         public string Name { get; set; }
         public string Address { get; set; }
         public string Director { get; set; }
 
-        public List<Street> Streets { get; set; }
+        public List<Product> Products { get; set; }
     }
 }

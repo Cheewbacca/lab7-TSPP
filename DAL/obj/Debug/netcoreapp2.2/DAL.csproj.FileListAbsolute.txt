@@ -10,9 +10,9 @@ C:\Users\DELL\Desktop\OSBB\OSBB\DAL\obj\Debug\netcoreapp2.2\DAL.pdb
 C:\Users\DELL\source\repos\Lab7-TSPP\DAL\bin\Debug\netcoreapp2.2\DAL.deps.json
 C:\Users\DELL\source\repos\Lab7-TSPP\DAL\bin\Debug\netcoreapp2.2\DAL.dll
 C:\Users\DELL\source\repos\Lab7-TSPP\DAL\bin\Debug\netcoreapp2.2\DAL.pdb
-C:\Users\DELL\source\repos\Lab7-TSPP\DAL\obj\Debug\netcoreapp2.2\DAL.csprojAssemblyReference.cache
 C:\Users\DELL\source\repos\Lab7-TSPP\DAL\obj\Debug\netcoreapp2.2\DAL.AssemblyInfoInputs.cache
 C:\Users\DELL\source\repos\Lab7-TSPP\DAL\obj\Debug\netcoreapp2.2\DAL.AssemblyInfo.cs
 C:\Users\DELL\source\repos\Lab7-TSPP\DAL\obj\Debug\netcoreapp2.2\DAL.csproj.CoreCompileInputs.cache
 C:\Users\DELL\source\repos\Lab7-TSPP\DAL\obj\Debug\netcoreapp2.2\DAL.dll
 C:\Users\DELL\source\repos\Lab7-TSPP\DAL\obj\Debug\netcoreapp2.2\DAL.pdb
+C:\Users\DELL\source\repos\Lab7-TSPP\DAL\obj\Debug\netcoreapp2.2\DAL.csprojAssemblyReference.cache

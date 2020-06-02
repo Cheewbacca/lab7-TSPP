@@ -3,17 +3,16 @@ using System.Collections.Generic;
 using System.Text;
 using Catalog.DAL.Entities;
 using Catalog.DAL.Repositories.Interfaces;
-using Catalog.DAL.EF;
 using Microsoft.EntityFrameworkCore;
+using Catalog.DAL.EF;
 using System.Linq;
 
 namespace Catalog.DAL.Repositories.Impl
 {
-    public class OSBBRepository
-        : BaseRepository<OSBB>, IOSBBRepository
+    public class ProductRepository
+        : BaseRepository<Product>, Interfaces.ProductRepository
     {
-
-        internal OSBBRepository(OSBBContext context) 
+        internal ProductRepository(CatalogContext context) 
             : base(context)
         {
         }

@@ -9,18 +9,18 @@ using System.Linq;
 
 namespace DAL.Tests
 {
-    public class StreetRepositoryInMemoryDBTests
+    public class ProductRepositoryInMemoryDBTests
     {
-        public OSBBContext Context => SqlLiteInMemoryContext();
+        public CatalogContext Context => SqlLiteInMemoryContext();
 
-        private OSBBContext SqlLiteInMemoryContext()
+        private CatalogContext SqlLiteInMemoryContext()
         {
 
-            var options = new DbContextOptionsBuilder<OSBBContext>()
+            var options = new DbContextOptionsBuilder<CatalogContext>()
                 .UseSqlite("DataSource=:memory:")
                 .Options;
 
-            var context = new OSBBContext(options);
+            var context = new CatalogContext(options);
             context.Database.OpenConnection();
             context.Database.EnsureCreated();
             return context;
@@ -33,20 +33,20 @@ namespace DAL.Tests
             int expectedListCount = 1;
             var context = SqlLiteInMemoryContext();
             EFUnitOfWork uow = new EFUnitOfWork(context);
-            IStreetRepository repository = uow.Streets;
+            Catalog.DAL.Repositories.Interfaces.ProductRepository repository = uow.Streets;
 
-            Street street = new Street()
+            Product street = new Product()
             {
-                OSBBID = 5,
+                CatalogID = 5,
                 Name = "test",
                 Description = "testD",
-                OSBB = new OSBB() { OSBBID = 5}
+                Catalog = new Catalog.DAL.Entities.Catalog() { CatalogID = 5}
             };
 
             //Act
             repository.Create(street);
             uow.Save();
-            var factListCount = context.Streets.Count();
+            var factListCount = context.Products.Count();
 
             // Assert
             Assert.Equal(expectedListCount, factListCount);
@@ -59,22 +59,22 @@ namespace DAL.Tests
             int expectedListCount = 0;
             var context = SqlLiteInMemoryContext();
             EFUnitOfWork uow = new EFUnitOfWork(context);
-            IStreetRepository repository = uow.Streets;
-            Street street = new Street()
+            Catalog.DAL.Repositories.Interfaces.ProductRepository repository = uow.Streets;
+            Product street = new Product()
             {
                 //StreetId = 1,
-                OSBBID = 5,
+                CatalogID = 5,
                 Name = "test",
                 Description = "testD",
-                OSBB = new OSBB() { OSBBID = 5 }
+                Catalog = new Catalog.DAL.Entities.Catalog() { CatalogID = 5 }
             };
-            context.Streets.Add(street);
+            context.Products.Add(street);
             context.SaveChanges();
 
             //Act
-            repository.Delete(street.StreetId);
+            repository.Delete(street.ProductID);
             uow.Save();
-            var factStreetCount = context.Streets.Count();
+            var factStreetCount = context.Products.Count();
 
             // Assert
             Assert.Equal(expectedListCount, factStreetCount);
@@ -86,20 +86,20 @@ namespace DAL.Tests
             // Arrange
             var context = SqlLiteInMemoryContext();
             EFUnitOfWork uow = new EFUnitOfWork(context);
-            IStreetRepository repository = uow.Streets;
-            Street expectedStreet = new Street()
+            Catalog.DAL.Repositories.Interfaces.ProductRepository repository = uow.Streets;
+            Product expectedStreet = new Product()
             {
                 //StreetId = 1,
-                OSBBID = 5,
+                CatalogID = 5,
                 Name = "test",
                 Description = "testD",
-                OSBB = new OSBB() { OSBBID = 5 }
+                Catalog = new Catalog.DAL.Entities.Catalog() { CatalogID = 5 }
             };
-            context.Streets.Add(expectedStreet);
+            context.Products.Add(expectedStreet);
             context.SaveChanges();
 
             //Act
-            var factStreet = repository.Get(expectedStreet.StreetId);
+            var factStreet = repository.Get(expectedStreet.ProductID);
 
             // Assert
             Assert.Equal(expectedStreet, factStreet);

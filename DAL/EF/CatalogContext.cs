@@ -6,13 +6,13 @@ using System.Text;
 
 namespace Catalog.DAL.EF
 {
-    public class OSBBContext
+    public class CatalogContext
         : DbContext
     {
-        public DbSet<OSBB> Osbbs { get; set; }
-        public DbSet<Street> Streets { get; set; }
+        public DbSet<Entities.Catalog> Catalogs { get; set; }
+        public DbSet<Product> Products { get; set; }
 
-        public OSBBContext(DbContextOptions options)
+        public CatalogContext(DbContextOptions options)
             : base(options)
         {
         }

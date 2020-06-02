@@ -3,16 +3,17 @@ using System.Collections.Generic;
 using System.Text;
 using Catalog.DAL.Entities;
 using Catalog.DAL.Repositories.Interfaces;
-using Microsoft.EntityFrameworkCore;
 using Catalog.DAL.EF;
+using Microsoft.EntityFrameworkCore;
 using System.Linq;
 
 namespace Catalog.DAL.Repositories.Impl
 {
-    public class StreetRepository
-        : BaseRepository<Street>, IStreetRepository
+    public class CatalogRepository
+        : BaseRepository<Entities.Catalog>, Interfaces.CatalogRepository
     {
-        internal StreetRepository(OSBBContext context) 
+
+        internal CatalogRepository(CatalogContext context) 
             : base(context)
         {
         }

@@ -10,31 +10,31 @@ namespace Catalog.DAL.EF
     public class EFUnitOfWork
         : IUnitOfWork
     {
-        private OSBBContext db;
-        private OSBBRepository osbbRepository;
-        private StreetRepository streetRepository;
+        private CatalogContext db;
+        private Repositories.Impl.CatalogRepository catalogRepository;
+        private Repositories.Impl.ProductRepository productRepository;
 
-        public EFUnitOfWork(OSBBContext context)
+        public EFUnitOfWork(CatalogContext context)
         {
             db = context;
         }
-        public IOSBBRepository OSBBs
+        public Repositories.Interfaces.CatalogRepository OSBBs
         {
             get
             {
-                if (osbbRepository == null)
-                    osbbRepository = new OSBBRepository(db);
-                return osbbRepository;
+                if (catalogRepository == null)
+                    catalogRepository = new Repositories.Impl.CatalogRepository(db);
+                return catalogRepository;
             }
         }
 
-        public IStreetRepository Streets
+        public Repositories.Interfaces.ProductRepository Streets
         {
             get
             {
-                if (streetRepository == null)
-                    streetRepository = new StreetRepository(db);
-                return streetRepository;
+                if (productRepository == null)
+                    productRepository = new Repositories.Impl.ProductRepository(db);
+                return productRepository;
             }
         }
 
