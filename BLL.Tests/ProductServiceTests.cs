@@ -33,7 +33,7 @@ namespace BLL.Tests
         public void GetProducts_UserIsAdmin_ThrowMethodAccessException()
         {
             // Arrange
-            User user = new Admin(1, "test", 1);
+            Client user = new Admin(1, "test", 1);
             SecurityContext.SetUser(user);
             var mockUnitOfWork = new Mock<IUnitOfWork>();
             IProductService productService = new ProductService(mockUnitOfWork.Object);
@@ -44,10 +44,10 @@ namespace BLL.Tests
         }
 
         [Fact]
-        public void GetProducts_StreetFromDAL_CorrectMappingToStreetDTO()
+        public void GetProducts_ProductFromDAL_CorrectMappingToProductDTO()
         {
             // Arrange
-            User user = new Director(1, "test", 1);
+            Client user = new Director(1, "test", 1);
             SecurityContext.SetUser(user);
             var productService = GetProducts();
 

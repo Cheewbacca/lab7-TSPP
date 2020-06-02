@@ -35,7 +35,7 @@ namespace Catalog.BLL.Services.Impl
             var user = SecurityContext.GetUser();
             var userType = user.GetType();
             if (userType != typeof(Director)
-                && userType != typeof(Accountant))
+                && userType != typeof(Manager))
             {
                 throw new MethodAccessException();
             }
@@ -60,7 +60,7 @@ namespace Catalog.BLL.Services.Impl
             var user = SecurityContext.GetUser();
             var userType = user.GetType();
             if (userType != typeof(Director)
-                || userType != typeof(Accountant))
+                || userType != typeof(Manager))
             {
                 throw new MethodAccessException();
             }

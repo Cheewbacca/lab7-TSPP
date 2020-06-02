@@ -7,12 +7,12 @@ namespace OSBB.Security
 {
     public static class SecurityContext
     {
-        static User _user = null;
+        static Client _user = null;
 
-        public static User GetUser()
+        public static Client GetUser()
         {
             return _user;
-        }        public static void SetUser(User user)
+        }        public static void SetUser(Client user)
         {
             _user = user;
         }

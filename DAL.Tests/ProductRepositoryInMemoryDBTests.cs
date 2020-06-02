@@ -27,7 +27,7 @@ namespace DAL.Tests
         }
 
         [Fact]
-        public void Create_InputStreetWithId0_SetStreetId1()
+        public void Create_InputProductWithId0_SetProductId1()
         {
             // Arrange
             int expectedListCount = 1;
@@ -35,7 +35,7 @@ namespace DAL.Tests
             EFUnitOfWork uow = new EFUnitOfWork(context);
             Catalog.DAL.Repositories.Interfaces.ProductRepository repository = uow.Streets;
 
-            Product street = new Product()
+            Product Product = new Product()
             {
                 CatalogID = 5,
                 Name = "test",
@@ -44,7 +44,7 @@ namespace DAL.Tests
             };
 
             //Act
-            repository.Create(street);
+            repository.Create(Product);
             uow.Save();
             var factListCount = context.Products.Count();
 
@@ -53,56 +53,56 @@ namespace DAL.Tests
         }
 
         [Fact]
-        public void Delete_InputExistStreetId_Removed()
+        public void Delete_InputExistProductId_Removed()
         {
             // Arrange
             int expectedListCount = 0;
             var context = SqlLiteInMemoryContext();
             EFUnitOfWork uow = new EFUnitOfWork(context);
             Catalog.DAL.Repositories.Interfaces.ProductRepository repository = uow.Streets;
-            Product street = new Product()
+            Product Product = new Product()
             {
-                //StreetId = 1,
+                //ProductId = 1,
                 CatalogID = 5,
                 Name = "test",
                 Description = "testD",
                 Catalog = new Catalog.DAL.Entities.Catalog() { CatalogID = 5 }
             };
-            context.Products.Add(street);
+            context.Products.Add(Product);
             context.SaveChanges();
 
             //Act
-            repository.Delete(street.ProductID);
+            repository.Delete(Product.ProductID);
             uow.Save();
-            var factStreetCount = context.Products.Count();
+            var factProductCount = context.Products.Count();
 
             // Assert
-            Assert.Equal(expectedListCount, factStreetCount);
+            Assert.Equal(expectedListCount, factProductCount);
         }
 
         [Fact]
-        public void Get_InputExistStreetId_ReturnStreet()
+        public void Get_InputExistProductId_ReturnProduct()
         {
             // Arrange
             var context = SqlLiteInMemoryContext();
             EFUnitOfWork uow = new EFUnitOfWork(context);
             Catalog.DAL.Repositories.Interfaces.ProductRepository repository = uow.Streets;
-            Product expectedStreet = new Product()
+            Product expectedProduct = new Product()
             {
-                //StreetId = 1,
+                //ProductId = 1,
                 CatalogID = 5,
                 Name = "test",
                 Description = "testD",
                 Catalog = new Catalog.DAL.Entities.Catalog() { CatalogID = 5 }
             };
-            context.Products.Add(expectedStreet);
+            context.Products.Add(expectedProduct);
             context.SaveChanges();
 
             //Act
-            var factStreet = repository.Get(expectedStreet.ProductID);
+            var factProduct = repository.Get(expectedProduct.ProductID);
 
             // Assert
-            Assert.Equal(expectedStreet, factStreet);
+            Assert.Equal(expectedProduct, factProduct);
         }
     }
 }

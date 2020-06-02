@@ -4,11 +4,11 @@ using System.Text;
 
 namespace OSBB.Security.Identity
 {
-    public class Director
+    public class Manager
         : Client
     {
-        public Director(int userId, string name, int catalogId) 
-            : base(userId, name, catalogId, nameof(Director))
+        public Manager(int userId, string name, int catalogId) 
+            : base(userId, name, catalogId, nameof(Manager))
         {
         }
     }

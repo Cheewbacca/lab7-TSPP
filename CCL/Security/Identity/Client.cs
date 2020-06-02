@@ -4,9 +4,9 @@ using System.Text;
 
 namespace OSBB.Security.Identity
 {
-    public abstract class User
+    public abstract class Client
     {
-        public User(int userId, string name, int catalogId, string userType)
+        public Client(int userId, string name, int catalogId, string userType)
         {
             UserId = userId;
             Name = name;

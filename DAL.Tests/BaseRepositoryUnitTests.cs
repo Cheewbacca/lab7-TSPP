@@ -10,10 +10,10 @@ using Moq;
 
 namespace DAL.Tests
 {
-    class TestStreetRepository
+    class TestProductRepository
         : BaseRepository<Product>
     {
-        public TestStreetRepository(DbContext context) 
+        public TestProductRepository(DbContext context) 
             : base(context)
         {
         }
@@ -23,7 +23,7 @@ namespace DAL.Tests
     {
 
         [Fact]
-        public void Create_InputStreetInstance_CalledAddMethodOfDBSetWithStreetInstance()
+        public void Create_InputProductInstance_CalledAddMethodOfDBSetWithProductInstance()
         {
             // Arrange
             DbContextOptions opt = new DbContextOptionsBuilder<CatalogContext>()
@@ -36,17 +36,17 @@ namespace DAL.Tests
                         ))
                 .Returns(mockDbSet.Object);
             //EFUnitOfWork uow = new EFUnitOfWork(mockContext.Object);
-            var repository = new TestStreetRepository(mockContext.Object);
+            var repository = new TestProductRepository(mockContext.Object);
 
-            Product expectedStreet = new Mock<Product>().Object;
+            Product expectedProduct = new Mock<Product>().Object;
 
             //Act
-            repository.Create(expectedStreet);
+            repository.Create(expectedProduct);
 
             // Assert
             mockDbSet.Verify(
                 dbSet => dbSet.Add(
-                    expectedStreet
+                    expectedProduct
                     ), Times.Once());
         }
 
@@ -64,23 +64,23 @@ namespace DAL.Tests
                         ))
                 .Returns(mockDbSet.Object);
             //EFUnitOfWork uow = new EFUnitOfWork(mockContext.Object);
-            //IStreetRepository repository = uow.Streets;
-            var repository = new TestStreetRepository(mockContext.Object);
+            //IProductRepository repository = uow.Products;
+            var repository = new TestProductRepository(mockContext.Object);
 
-            Product expectedStreet = new Product() { ProductID = 1};
-            mockDbSet.Setup(mock => mock.Find(expectedStreet.ProductID)).Returns(expectedStreet);
+            Product expectedProduct = new Product() { ProductID = 1};
+            mockDbSet.Setup(mock => mock.Find(expectedProduct.ProductID)).Returns(expectedProduct);
 
             //Act
-            repository.Delete(expectedStreet.ProductID);
+            repository.Delete(expectedProduct.ProductID);
 
             // Assert
             mockDbSet.Verify(
                 dbSet => dbSet.Find(
-                    expectedStreet.ProductID
+                    expectedProduct.ProductID
                     ), Times.Once());
             mockDbSet.Verify(
                 dbSet => dbSet.Remove(
-                    expectedStreet
+                    expectedProduct
                     ), Times.Once());
         }
 
@@ -98,20 +98,20 @@ namespace DAL.Tests
                         ))
                 .Returns(mockDbSet.Object);
 
-            Product expectedStreet = new Product() { ProductID = 1 };
-            mockDbSet.Setup(mock => mock.Find(expectedStreet.ProductID))
-                    .Returns(expectedStreet);
-            var repository = new TestStreetRepository(mockContext.Object);
+            Product expectedProduct = new Product() { ProductID = 1 };
+            mockDbSet.Setup(mock => mock.Find(expectedProduct.ProductID))
+                    .Returns(expectedProduct);
+            var repository = new TestProductRepository(mockContext.Object);
 
             //Act
-            var actualStreet = repository.Get(expectedStreet.ProductID);
+            var actualProduct = repository.Get(expectedProduct.ProductID);
 
             // Assert
             mockDbSet.Verify(
                 dbSet => dbSet.Find(
-                    expectedStreet.ProductID
+                    expectedProduct.ProductID
                     ), Times.Once());
-            Assert.Equal(expectedStreet, actualStreet);
+            Assert.Equal(expectedProduct, actualProduct);
         }
 
       
